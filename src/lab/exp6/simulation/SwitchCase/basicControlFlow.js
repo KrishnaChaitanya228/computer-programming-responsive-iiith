@@ -99,6 +99,8 @@ window.view = {
 		this.changeOpacity(imagesId);	
 	},
 	// jumpToDay: to jump on desire day.
+
+
 	jumpToDay: function () {
 		switch (model.inputNumber) {
 			case 1:
@@ -221,7 +223,7 @@ window.view = {
 			this.codeExecutionWithColour();
 	 	if (this.currentSiblingElement.className === 'break redClass')
 			this.codeExecutionWithColourAndId('closeBrc1Id');
-		if (1 <= model.inputNumber && model.inputNumber <= 6) {
+		if (1 <= model.inputNumber && model.inputNumber < 6) {
 	 		if (this.nextSiblingElement.id === 'holidayId')
 				this.codeExecutionWithColourAndId('elseIfId');
 	 		else if (this.nextSiblingElement.id === 'workingdayId') {
@@ -240,7 +242,7 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'INVALID INPUT');
 	 		}
 	 	}
-	 	if (model.inputNumber === 7) {
+	 	if (model.inputNumber === 7 || model.inputNumber==6) {
 	 		if (this.nextSiblingElement.id === 'holidayId') {
 				this.codeExecutionWithColour();
 				this.changeOpacity('holidayImage');
