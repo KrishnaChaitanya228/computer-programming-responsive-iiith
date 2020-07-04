@@ -244,7 +244,7 @@ window.view = {
 		}
 		else if ( this.lastRedDiv.id === 'line13' ) {
 			this.insertKey()
-			this.showImage();
+			
 			this.removeImage()
 			this.highlightNextStep()
 		}
